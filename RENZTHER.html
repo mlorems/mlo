@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<!-- saved from url=(0076)file:///C:/Users/acer/Downloads/renzther_18th_birthday_website.html#memories -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy 18th Birthday, Renzther ♡</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&family=Great+Vibes&display=swap');
+
+:root{
+  --display-font:'Cormorant Garamond', Georgia, serif;
+  --script-font:'Great Vibes', cursive;
+  --body-font:'DM Sans', Arial, sans-serif;
+}
+
+body{
+  font-family:var(--body-font);
+  letter-spacing:.01em;
+}
+
+h1,h2,h3,.game-title,.intro-content h1,.closing h2{
+  font-family:var(--display-font);
+  letter-spacing:.01em;
+}
+
+.intro-content h1,
+.closing h2{
+  font-weight:500;
+}
+
+.intro-content h1{
+  font-size:clamp(3.8rem,9vw,7.5rem);
+}
+
+.hero h1{
+  font-family:var(--display-font);
+  font-weight:500;
+  letter-spacing:-.02em;
+}
+
+.eyebrow,
+.intro-small,
+.section-heading .label,
+nav a{
+  font-family:var(--body-font);
+}
+
+.section-heading h2{
+  font-weight:500;
+  letter-spacing:-.01em;
+}
+
+.section-heading h2::after{
+  content:'';
+  display:block;
+  width:48px;
+  height:1px;
+  margin:13px auto 0;
+  background:var(--sage);
+  opacity:.7;
+}
+
+.photo-card h3,
+.letter h3{
+  font-family:var(--display-font);
+  font-size:1.45rem;
+  font-weight:600;
+}
+
+.message,
+.letter p,
+.subtitle,
+.section-heading p,
+.photo-card p,
+.game-sub,
+.lock-message,
+.progress,
+.closing p,
+footer{
+  font-family:var(--body-font);
+}
+
+.button,
+.intro-btn,
+.unlock-btn{
+  font-family:var(--body-font);
+  letter-spacing:.02em;
+}
+
+.big-heart{
+  font-family:var(--display-font);
+}
+
+:root{
+  --forest:#34483b;
+  --deep:#26382e;
+  --sage:#71836f;
+  --sage2:#a7b6a0;
+  --mist:#dfe7da;
+  --cream:#f7f2e8;
+  --paper:#fffdf7;
+  --beige:#d9d0bd;
+  --ink:#39453c;
+  --muted:#748074;
+  --pink:#d8aaa8;
+  --shadow:0 18px 45px rgba(38,56,46,.12);
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Georgia,"Times New Roman",serif;
+  color:var(--ink);
+  background:
+    radial-gradient(circle at 10% 10%,rgba(167,182,160,.18),transparent 28%),
+    radial-gradient(circle at 90% 70%,rgba(216,170,168,.12),transparent 24%),
+    var(--cream);
+  line-height:1.7;
+  overflow-x:hidden;
+}
+button,a{font:inherit}
+button{cursor:pointer}
+
+body.locked{overflow:hidden}
+
+/* FLOWER OPENING */
+#flowerIntro{
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  background:
+    radial-gradient(circle at 50% 45%,rgba(167,182,160,.24),transparent 35%),
+    var(--deep);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  overflow:hidden;
+  transition:opacity .9s ease,visibility .9s ease;
+}
+#flowerIntro.hide{
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+}
+.intro-content{
+  position:relative;
+  z-index:3;
+  max-width:650px;
+  padding:30px;
+  color:var(--cream);
+}
+.intro-small{
+  text-transform:uppercase;
+  letter-spacing:4px;
+  font-size:.72rem;
+  opacity:.8;
+}
+.intro-content h1{
+  font-size:clamp(3rem,8vw,6.5rem);
+  line-height:1;
+  margin:18px 0;
+  font-weight:normal;
+}
+.intro-content p{max-width:500px;margin:0 auto 25px;opacity:.88}
+.intro-btn,.unlock-btn,.button{
+  border:0;
+  display:inline-block;
+  padding:13px 24px;
+  border-radius:999px;
+  background:var(--cream);
+  color:var(--deep);
+  text-decoration:none;
+  font-weight:bold;
+  transition:.25s ease;
+}
+.intro-btn:hover,.unlock-btn:hover,.button:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+.flower-burst{
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+}
+.burst-flower{
+  position:absolute;
+  font-size:clamp(1.5rem,4vw,3.5rem);
+  animation:flowerDrift linear infinite;
+  opacity:.75;
+}
+@keyframes flowerDrift{
+  0%{transform:translateY(110vh) rotate(0deg);opacity:0}
+  15%{opacity:.75}
+  85%{opacity:.75}
+  100%{transform:translateY(-20vh) rotate(240deg);opacity:0}
+}
+
+/* NAV */
+nav{
+  position:sticky;
+  top:0;
+  z-index:100;
+  display:flex;
+  justify-content:center;
+  gap:28px;
+  padding:15px;
+  background:rgba(247,242,232,.92);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--beige);
+}
+nav a{
+  color:var(--forest);
+  text-decoration:none;
+  font-size:.9rem;
+  font-weight:bold;
+}
+nav a:hover{color:var(--sage)}
+
+/* HERO */
+.hero{
+  min-height:90vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:60px 20px;
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at top left,var(--mist),transparent 35%),
+    radial-gradient(circle at bottom right,#e9dfd0,transparent 35%);
+}
+.hero-content{max-width:850px}
+.eyebrow{
+  letter-spacing:4px;
+  text-transform:uppercase;
+  font-size:.75rem;
+  color:var(--sage);
+}
+.hero h1{
+  color:var(--deep);
+  font-size:clamp(3.2rem,8vw,7rem);
+  line-height:.98;
+  font-weight:normal;
+  margin:18px 0;
+}
+.subtitle{
+  max-width:620px;
+  margin:0 auto 28px;
+  font-size:1.08rem;
+}
+.cat-sticker{
+  display:inline-block;
+  font-size:4rem;
+  animation:bob 3.5s ease-in-out infinite;
+  filter:drop-shadow(0 8px 7px rgba(0,0,0,.08));
+}
+@keyframes bob{50%{transform:translateY(-9px) rotate(2deg)}}
+.hero-flower{
+  position:absolute;
+  opacity:.55;
+  animation:bob 5s ease-in-out infinite;
+}
+.hf1{top:12%;left:8%;font-size:3rem}
+.hf2{top:20%;right:10%;font-size:2.4rem;animation-delay:.7s}
+.hf3{bottom:14%;left:15%;font-size:2rem;animation-delay:1.2s}
+.hf4{bottom:18%;right:14%;font-size:3rem;animation-delay:.3s}
+
+/* GENERAL */
+section{
+  max-width:1120px;
+  margin:auto;
+  padding:90px 20px;
+}
+.section-heading{text-align:center;margin-bottom:45px}
+.section-heading .label{
+  color:var(--sage);
+  text-transform:uppercase;
+  letter-spacing:3px;
+  font-size:.72rem;
+}
+.section-heading h2{
+  color:var(--deep);
+  font-size:clamp(2rem,5vw,3.4rem);
+  font-weight:normal;
+  margin:8px 0 12px;
+}
+.section-heading p{max-width:650px;margin:auto;color:var(--muted)}
+.hidden-section{
+  display:none;
+  animation:sectionIn .8s ease;
+}
+.hidden-section.show{display:block}
+@keyframes sectionIn{
+  from{opacity:0;transform:translateY(25px)}
+  to{opacity:1;transform:none}
+}
+
+/* GAME PANEL */
+.game-panel{
+  background:rgba(255,253,247,.8);
+  border:1px solid var(--beige);
+  border-radius:28px;
+  padding:28px;
+  box-shadow:var(--shadow);
+  text-align:center;
+  margin-bottom:35px;
+}
+.game-title{
+  color:var(--deep);
+  font-size:1.5rem;
+  margin-bottom:5px;
+}
+.game-sub{color:var(--muted);font-size:.92rem;margin-bottom:20px}
+.lock-message{font-size:.9rem;color:var(--muted);margin-top:15px}
+
+/* GAME 1 */
+.flower-hunt{
+  position:relative;
+  min-height:210px;
+  border-radius:20px;
+  background:var(--mist);
+  overflow:hidden;
+}
+.hunt-flower{
+  position:absolute;
+  border:0;
+  background:transparent;
+  font-size:2rem;
+  transition:.2s;
+}
+.hunt-flower:hover{transform:scale(1.2)}
+.hunt-flower.found{opacity:.2;transform:scale(.7)}
+.progress{margin-top:12px;font-size:.85rem;color:var(--sage)}
+
+/* PHOTO WALL */
+.wall{
+  position:relative;
+  padding:55px 30px 40px;
+  border-radius:32px;
+  background:linear-gradient(135deg,#dbe4d6,#edf0e6);
+  overflow:hidden;
+}
+.yarn{
+  position:absolute;
+  left:8%;
+  right:8%;
+  top:74px;
+  height:3px;
+  background:#8b8d77;
+  transform:rotate(-1deg);
+  box-shadow:0 1px 0 rgba(255,255,255,.6);
+}
+.yarn:after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  top:34px;
+  height:3px;
+  background:#8b8d77;
+  transform:rotate(2deg);
+}
+.photos{
+  position:relative;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:55px 25px;
+}
+.photo-card{
+  position:relative;
+  background:var(--paper);
+  padding:11px 11px 18px;
+  box-shadow:0 10px 25px rgba(38,56,46,.13);
+  transform:rotate(-2deg);
+}
+.photo-card:nth-child(2n){transform:rotate(2deg);margin-top:25px}
+.photo-card:nth-child(3n){transform:rotate(-1deg);margin-top:-8px}
+.photo-card:before{
+  content:"";
+  position:absolute;
+  width:42px;
+  height:14px;
+  background:#c6bca7;
+  opacity:.7;
+  top:-7px;
+  left:50%;
+  transform:translateX(-50%) rotate(-3deg);
+}
+.string-pin{
+  position:absolute;
+  top:-22px;
+  left:50%;
+  width:15px;
+  height:15px;
+  border-radius:50%;
+  background:var(--sage);
+  transform:translateX(-50%);
+  z-index:2;
+  box-shadow:0 0 0 4px rgba(255,255,255,.45);
+}
+.photo-box{
+  height:230px;
+  border-radius:3px;
+  background:#e4eadf;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  overflow:hidden;
+  color:var(--sage);
+}
+.photo-box img{width:100%;height:100%;object-fit:cover}
+.photo-card h3{font-size:1.05rem;color:var(--deep);margin-top:12px}
+.photo-card p{font-size:.88rem;color:var(--muted);line-height:1.5}
+
+/* MEMORY GAME */
+.memory-board{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+  max-width:520px;
+  margin:20px auto;
+}
+.memory-card{
+  aspect-ratio:1;
+  border:0;
+  border-radius:14px;
+  background:var(--forest);
+  color:var(--cream);
+  font-size:1.7rem;
+  transition:.25s;
+}
+.memory-card.open,.memory-card.matched{
+  background:var(--mist);
+  color:var(--deep);
+}
+.memory-card.matched{opacity:.65}
+
+/* LETTERS */
+.letters{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
+}
+.letter{
+  background:var(--paper);
+  border:1px solid var(--beige);
+  border-radius:24px;
+  padding:25px;
+  box-shadow:var(--shadow);
+}
+.letter-photo{
+  height:180px;
+  border-radius:16px;
+  background:var(--mist);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  margin-bottom:18px;
+}
+.letter-photo img{width:100%;height:100%;object-fit:cover}
+.letter h3{color:var(--deep);margin-bottom:10px}
+.letter p{font-size:.94rem}
+
+/* POEM GAME */
+.poem-game{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+  margin:25px auto;
+  max-width:650px;
+}
+.poem-piece{
+  border:1px solid var(--beige);
+  background:var(--cream);
+  color:var(--deep);
+  padding:12px 16px;
+  border-radius:14px;
+}
+.poem-piece.selected{
+  background:var(--sage);
+  color:white;
+}
+
+/* WISH GAME */
+.wishes{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:14px;
+  max-width:800px;
+  margin:auto;
+}
+.wish{
+  border:1px solid var(--beige);
+  background:var(--paper);
+  padding:22px 15px;
+  border-radius:20px;
+  color:var(--deep);
+  transition:.25s;
+}
+.wish.chosen{
+  background:var(--mist);
+  transform:translateY(-4px);
+}
+.wish span{display:block;font-size:2rem;margin-bottom:7px}
+
+/* VIDEO GAME */
+.star-field{
+  position:relative;
+  height:300px;
+  border-radius:22px;
+  background:var(--deep);
+  overflow:hidden;
+}
+.star{
+  position:absolute;
+  border:0;
+  background:transparent;
+  color:#f3e7bd;
+  font-size:2rem;
+  animation:starTwinkle 1.2s ease-in-out infinite alternate;
+}
+@keyframes starTwinkle{to{transform:scale(1.25);opacity:.65}}
+.video-wrap{
+  display:none;
+  margin-top:25px;
+}
+.video-wrap.show{display:block}
+video{
+  width:100%;
+  max-height:500px;
+  border-radius:20px;
+  background:#18251e;
+}
+
+/* ENDING */
+.closing{
+  max-width:none;
+  text-align:center;
+  background:var(--deep);
+  color:var(--cream);
+  padding:110px 25px;
+  position:relative;
+  overflow:hidden;
+}
+.closing h2{
+  color:var(--cream);
+  font-size:clamp(2.2rem,6vw,4.5rem);
+  font-weight:normal;
+  line-height:1.1;
+  margin:15px 0;
+}
+.closing p{max-width:650px;margin:auto;opacity:.88}
+.big-heart{font-size:3rem;animation:bob 2.5s ease-in-out infinite}
+
+/* STICKERS */
+.sticker{
+  position:fixed;
+  z-index:50;
+  pointer-events:none;
+  font-size:2.3rem;
+  filter:drop-shadow(0 7px 5px rgba(0,0,0,.1));
+}
+.sticker.cat{right:18px;bottom:18px;animation:bob 4s ease-in-out infinite}
+.sticker.flower{left:18px;bottom:18px;animation:bob 3s ease-in-out infinite}
+
+@media(max-width:650px){
+  nav{gap:14px;font-size:.82rem}
+  section{padding:65px 15px}
+  .memory-board{grid-template-columns:repeat(4,1fr)}
+  .photo-box{height:200px}
+  .wall{padding:50px 15px 30px}
+}
+
+.wish.wrong{
+  animation:shake .35s ease;
+  background:#ead8d4;
+}
+@keyframes shake{
+  0%,100%{transform:translateX(0)}
+  25%{transform:translateX(-6px)}
+  75%{transform:translateX(6px)}
+}
+.game-panel{
+  position:relative;
+}
+.game-panel::before{
+  content:'✦';
+  position:absolute;
+  top:15px;
+  right:22px;
+  color:var(--sage2);
+  opacity:.55;
+}
+
+</style>
+</head>
+
+<body class="">
+
+<!-- Opening screen -->
+<div id="flowerIntro" class="hide">
+  <div class="flower-burst" id="flowerBurst"><span class="burst-flower" style="left: 74.5568%; animation-duration: 10.3423s; animation-delay: -4.4364s;">🌸</span><span class="burst-flower" style="left: 90.126%; animation-duration: 8.73912s; animation-delay: -8.7109s;">🌻</span><span class="burst-flower" style="left: 54.1353%; animation-duration: 10.1542s; animation-delay: -4.36557s;">🌻</span><span class="burst-flower" style="left: 43.502%; animation-duration: 11.9236s; animation-delay: -0.187135s;">🌼</span><span class="burst-flower" style="left: 74.0045%; animation-duration: 8.48478s; animation-delay: -7.10453s;">🌿</span><span class="burst-flower" style="left: 54.9193%; animation-duration: 9.25168s; animation-delay: -4.18744s;">🌿</span><span class="burst-flower" style="left: 0.939177%; animation-duration: 11.9437s; animation-delay: -0.886254s;">🌺</span><span class="burst-flower" style="left: 61.9405%; animation-duration: 8.20925s; animation-delay: -5.94053s;">🌼</span><span class="burst-flower" style="left: 31.45%; animation-duration: 5.41956s; animation-delay: -2.82945s;">💐</span><span class="burst-flower" style="left: 44.5767%; animation-duration: 5.59456s; animation-delay: -9.07777s;">🌿</span><span class="burst-flower" style="left: 17.2809%; animation-duration: 7.23256s; animation-delay: -2.91911s;">🌼</span><span class="burst-flower" style="left: 95.908%; animation-duration: 6.36795s; animation-delay: -6.14437s;">🌺</span><span class="burst-flower" style="left: 19.9712%; animation-duration: 10.0681s; animation-delay: -0.916986s;">🌷</span><span class="burst-flower" style="left: 83.3519%; animation-duration: 9.21004s; animation-delay: -7.5415s;">🌸</span><span class="burst-flower" style="left: 34.7937%; animation-duration: 7.00705s; animation-delay: -3.01201s;">💐</span><span class="burst-flower" style="left: 14.9068%; animation-duration: 5.36724s; animation-delay: -1.81085s;">🌻</span><span class="burst-flower" style="left: 85.4621%; animation-duration: 7.5507s; animation-delay: -2.73471s;">🌺</span><span class="burst-flower" style="left: 88.6586%; animation-duration: 5.31273s; animation-delay: -6.05871s;">🌸</span><span class="burst-flower" style="left: 92.414%; animation-duration: 7.43703s; animation-delay: -6.04725s;">🌻</span><span class="burst-flower" style="left: 84.6048%; animation-duration: 11.6211s; animation-delay: -2.45982s;">💐</span><span class="burst-flower" style="left: 58.2137%; animation-duration: 7.82774s; animation-delay: -3.69407s;">🌻</span><span class="burst-flower" style="left: 55.6051%; animation-duration: 8.61588s; animation-delay: -7.58893s;">🌿</span><span class="burst-flower" style="left: 4.03351%; animation-duration: 9.5989s; animation-delay: -3.35844s;">🌸</span><span class="burst-flower" style="left: 20.622%; animation-duration: 5.5592s; animation-delay: -0.209922s;">🌸</span><span class="burst-flower" style="left: 56.2145%; animation-duration: 8.92402s; animation-delay: -7.5465s;">💐</span><span class="burst-flower" style="left: 64.8121%; animation-duration: 6.80289s; animation-delay: -3.86631s;">🌸</span><span class="burst-flower" style="left: 39.3645%; animation-duration: 5.29004s; animation-delay: -2.25528s;">🌷</span><span class="burst-flower" style="left: 88.2358%; animation-duration: 6.73916s; animation-delay: -3.28852s;">🌸</span><span class="burst-flower" style="left: 24.4303%; animation-duration: 8.27731s; animation-delay: -2.89008s;">🌼</span><span class="burst-flower" style="left: 72.8194%; animation-duration: 11.5491s; animation-delay: -6.55947s;">🍃</span><span class="burst-flower" style="left: 44.9006%; animation-duration: 10.3151s; animation-delay: -3.15388s;">💐</span><span class="burst-flower" style="left: 62.2658%; animation-duration: 7.75628s; animation-delay: -2.84538s;">🌺</span><span class="burst-flower" style="left: 3.45473%; animation-duration: 8.62428s; animation-delay: -9.53117s;">🌺</span><span class="burst-flower" style="left: 65.0794%; animation-duration: 9.79777s; animation-delay: -6.76824s;">🌺</span><span class="burst-flower" style="left: 74.3608%; animation-duration: 10.4957s; animation-delay: -0.0303446s;">🌿</span><span class="burst-flower" style="left: 20.1077%; animation-duration: 6.8149s; animation-delay: -7.02263s;">💐</span><span class="burst-flower" style="left: 69.0158%; animation-duration: 10.9257s; animation-delay: -1.05443s;">🌿</span><span class="burst-flower" style="left: 60.9347%; animation-duration: 8.01031s; animation-delay: -6.47502s;">💐</span><span class="burst-flower" style="left: 66.3161%; animation-duration: 6.69867s; animation-delay: -1.77721s;">🌼</span><span class="burst-flower" style="left: 85.0783%; animation-duration: 5.56099s; animation-delay: -5.88635s;">💐</span><span class="burst-flower" style="left: 67.2278%; animation-duration: 5.95016s; animation-delay: -9.63146s;">🌿</span><span class="burst-flower" style="left: 14.6162%; animation-duration: 7.31419s; animation-delay: -2.9184s;">🌻</span></div>
+  <div class="intro-content">
+    <div class="intro-small">A little birthday surprise</div>
+    <h1>For Renzther ♡</h1>
+    <p>Before the memories, letters, games, and wishes, let the flowers welcome you first.</p>
+    <button class="intro-btn" onclick="enterSite()">Enter the garden ♡</button>
+  </div>
+</div>
+
+<nav>
+  <a href="file:///C:/Users/acer/Downloads/renzther_18th_birthday_website.html#home">Home</a>
+  <a href="file:///C:/Users/acer/Downloads/renzther_18th_birthday_website.html#memories">Memories</a>
+  <a href="file:///C:/Users/acer/Downloads/renzther_18th_birthday_website.html#letters">Letters</a>
+  <a href="file:///C:/Users/acer/Downloads/renzther_18th_birthday_website.html#ending">Ending</a>
+</nav>
+
+<header class="hero" id="home">
+  <span class="hero-flower hf1">🌷</span>
+  <span class="hero-flower hf2">🌿</span>
+  <span class="hero-flower hf3">🌼</span>
+  <span class="hero-flower hf4">🌸</span>
+
+  <div class="hero-content">
+    <div class="cat-sticker">🐈🌷</div>
+    <p class="eyebrow">18 years of being you</p>
+    <h1>Happy Birthday,<br>Renzther! ♡</h1>
+    <p class="subtitle">
+      A tiny corner of the internet filled with memories, letters,
+      little games, flowers, and all the good things we wish for you.
+    </p>
+    <a class="button" href="file:///C:/Users/acer/Downloads/renzther_18th_birthday_website.html#memories">Start the surprise ↓</a>
+  </div>
+</header>
+
+<!-- GAME 1 + PHOTO WALL -->
+<section id="memories">
+  <div class="section-heading">
+    <div class="label">01 · Unlock the memories</div>
+    <h2>Find the Hidden Flowers 🌷</h2>
+    <p>Click all 6 flowers hiding in the little garden. Once you find them all, the memory wall will open.</p>
+  </div>
+
+  <div class="game-panel">
+    <div class="game-title">A tiny flower hunt</div>
+    <div class="game-sub">Find all 8 flowers hidden around the garden. Some are tucked into the corners, so look carefully.</div>
+    <div class="flower-hunt" id="flowerHunt"><button class="hunt-flower" style="left: 6%; top: 13%;">🌷</button><button class="hunt-flower" style="left: 20%; top: 69%;">🌼</button><button class="hunt-flower" style="left: 34%; top: 27%;">🌸</button><button class="hunt-flower" style="left: 48%; top: 78%;">🌻</button><button class="hunt-flower" style="left: 61%; top: 17%;">🌺</button><button class="hunt-flower" style="left: 73%; top: 57%;">🌷</button><button class="hunt-flower" style="left: 87%; top: 29%;">🌼</button><button class="hunt-flower" style="left: 92%; top: 76%;">🌸</button></div>
+    <div class="progress" id="flowerProgress">Flowers found: 0 / 8</div>
+  </div>
+
+  <div id="memoryWall" class="hidden-section">
+    <div class="section-heading">
+      <div class="label">Unlocked</div>
+      <h2>Our Little Memory Wall 🌿</h2>
+      <p>Like little photographs hanging together, each memory is tied to the next.</p>
+    </div>
+
+    <div class="wall">
+      <div class="yarn"></div>
+      <div class="photos">
+
+        <article class="photo-card">
+          <div class="string-pin"></div>
+          <div class="photo-box">
+            <!-- Replace with: <img src="images/photo1.jpg" alt="Memory 1"> -->
+            <span>📸<br>Add photo 1</span>
+          </div>
+          <h3>Memory with [Name]</h3>
+          <p>Replace this with a short caption about this memory.</p>
+        </article>
+
+        <article class="photo-card">
+          <div class="string-pin"></div>
+          <div class="photo-box">
+            <!-- Replace with: <img src="images/photo2.jpg" alt="Memory 2"> -->
+            <span>📸<br>Add photo 2</span>
+          </div>
+          <h3>Memory with [Name]</h3>
+          <p>Replace this with a short caption about this memory.</p>
+        </article>
+
+        <article class="photo-card">
+          <div class="string-pin"></div>
+          <div class="photo-box">
+            <!-- Replace with: <img src="images/photo3.jpg" alt="Memory 3"> -->
+            <span>📸<br>Add photo 3</span>
+          </div>
+          <h3>Memory with [Name]</h3>
+          <p>Replace this with a short caption about this memory.</p>
+        </article>
+
+        <article class="photo-card">
+          <div class="string-pin"></div>
+          <div class="photo-box">
+            <!-- Replace with: <img src="images/photo4.jpg" alt="Memory 4"> -->
+            <span>📸<br>Add photo 4</span>
+          </div>
+          <h3>Memory with [Name]</h3>
+          <p>Replace this with a short caption about this memory.</p>
+        </article>
+
+        <article class="photo-card">
+          <div class="string-pin"></div>
+          <div class="photo-box">
+            <!-- Replace with: <img src="images/photo5.jpg" alt="Memory 5"> -->
+            <span>📸<br>Add photo 5</span>
+          </div>
+          <h3>Memory with [Name]</h3>
+          <p>Replace this with a short caption about this memory.</p>
+        </article>
+
+        <article class="photo-card">
+          <div class="string-pin"></div>
+          <div class="photo-box">
+            <!-- Replace with: <img src="images/photo6.jpg" alt="Memory 6"> -->
+            <span>📸<br>Add photo 6</span>
+          </div>
+          <h3>Memory with [Name]</h3>
+          <p>Replace this with a short caption about this memory.</p>
+        </article>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GAME 2 + LONG GREETINGS -->
+<section id="letters">
+  <div class="section-heading">
+    <div class="label">02 · Unlock the letters</div>
+    <h2>Match the Little Memories 💌</h2>
+    <p>Match all four pairs to open the long birthday messages.</p>
+  </div>
+
+  <div class="game-panel">
+    <div class="game-title">Memory Match</div>
+    <div class="game-sub">Find all 6 matching pairs. Try to remember where each symbol is hiding.</div>
+    <div class="memory-board" id="memoryBoard"><button class="memory-card" data-symbol="🌷">♡</button><button class="memory-card" data-symbol="🌼">♡</button><button class="memory-card" data-symbol="🌷">♡</button><button class="memory-card" data-symbol="🍀">♡</button><button class="memory-card" data-symbol="🐈">♡</button><button class="memory-card" data-symbol="🌸">♡</button><button class="memory-card" data-symbol="🌿">♡</button><button class="memory-card" data-symbol="🌿">♡</button><button class="memory-card" data-symbol="🍀">♡</button><button class="memory-card" data-symbol="🐈">♡</button><button class="memory-card" data-symbol="🌸">♡</button><button class="memory-card" data-symbol="🌼">♡</button></div>
+    <div class="progress" id="memoryProgress">Pairs matched: 0 / 6</div>
+  </div>
+
+  <div id="longLetters" class="hidden-section">
+    <div class="section-heading">
+      <div class="label">Unlocked</div>
+      <h2>Birthday Letters 💌</h2>
+      <p>Long messages from the people who are lucky enough to know you.</p>
+    </div>
+
+    <div class="letters">
+
+      <article class="letter">
+        <div class="letter-photo">
+          <!-- Replace with your image -->
+          <span>📸 Add friend's picture</span>
+        </div>
+        <h3>From [Name] 🌷</h3>
+        <p>
+          Dear Renz,<br><br>
+          Write the long birthday message here. You can make this as personal,
+          funny, sentimental, or chaotic as you want.<br><br>
+          Add another paragraph here for your favorite memories, inside jokes,
+          thank-you message, or anything you want Renz to remember.
+        </p>
+      </article>
+
+      <article class="letter">
+        <div class="letter-photo">
+          <!-- Replace with your image -->
+          <span>📸 Add friend's picture</span>
+        </div>
+        <h3>From [Name] 🌼</h3>
+        <p>
+          Dear Renz,<br><br>
+          Write another long message here. This section can be different for
+          every friend, so each letter feels personal.<br><br>
+          End with something sweet and a birthday wish.
+        </p>
+      </article>
+
+      <article class="letter">
+        <div class="letter-photo">
+          <!-- Replace with your image -->
+          <span>📸 Add friend's picture</span>
+        </div>
+        <h3>From [Name] 🌿</h3>
+        <p>
+          Dear Renz,<br><br>
+          Your message goes here. You can add as many paragraphs as you need.
+          The card will naturally grow with the message.
+        </p>
+      </article>
+
+      <article class="letter">
+        <div class="letter-photo">
+          <!-- Replace with your image -->
+          <span>📸 Add friend's picture</span>
+        </div>
+        <h3>From [Name] 🌸</h3>
+        <p>
+          Dear Renz,<br><br>
+          Another personal birthday letter goes here. Make it yours.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- GAME 3 + POEM -->
+<section>
+  <div class="section-heading">
+    <div class="label">03 · Unlock the poem</div>
+    <h2>Put the Flowers in Order 🌸</h2>
+    <p>Click the flower pieces in the correct order to reveal a little birthday poem.</p>
+  </div>
+
+  <div class="game-panel">
+    <div class="poem-game" id="poemGame"><button class="poem-piece">🌱</button><button class="poem-piece">🌸</button><button class="poem-piece">🍀</button><button class="poem-piece">🌿</button><button class="poem-piece">🌺</button><button class="poem-piece">🌼</button><button class="poem-piece">🌷</button></div>
+    <div class="progress" id="poemProgress">Poem pieces placed: 0 / 7</div>
+  </div>
+
+  <div id="poemSection" class="hidden-section">
+    <div class="game-panel">
+      <div style="font-size:2.5rem">🌷 🌿 🌼 🌸 🌷</div>
+      <h2 style="font-weight:normal;color:var(--deep);margin:15px 0">A Little Poem for Renz</h2>
+      <p style="max-width:650px;margin:auto;font-size:1.05rem">
+        May every morning bring a reason to smile,<br>
+        May every dream be worth the while.<br>
+        May good friends stay close through every new day,<br>
+        And may happiness find you along the way.<br>
+        For eighteen is only the beginning of the story you will write. ♡
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- GAME 4 + WISHES -->
+<section>
+  <div class="section-heading">
+    <div class="label">04 · Unlock the wishes</div>
+    <h2>Choose Five Little Wishes 🌿</h2>
+    <p>Pick any five wishes from the garden. Each one becomes part of the birthday wish wall.</p>
+  </div>
+
+  <div class="game-panel">
+    <div class="wishes" id="wishGame">
+      <button class="wish" onclick="chooseWish(this)"><span>🌱</span>New beginnings</button>
+      <button class="wish" onclick="chooseWish(this)"><span>☀️</span>Bright days</button>
+      <button class="wish" onclick="chooseWish(this)"><span>🌷</span>Good memories</button>
+      <button class="wish" onclick="chooseWish(this)"><span>🍀</span>Good luck</button>
+      <button class="wish" onclick="chooseWish(this)"><span>🕊️</span>Peace</button>
+      <button class="wish" onclick="chooseWish(this)"><span>✨</span>Big dreams</button>
+      <button class="wish" onclick="chooseWish(this)"><span>🐈</span>Soft moments</button>
+      <button class="wish" onclick="chooseWish(this)"><span>🌼</span>Happiness</button>
+      <button class="wish decoy-wish" onclick="chooseDecoy(this)"><span>🪻</span>Oops!</button>
+    </div>
+    <div class="progress" id="wishProgress">Wishes chosen: 0 / 5</div>
+  </div>
+
+  <div id="wishSection" class="hidden-section">
+    <div class="game-panel">
+      <div style="font-size:2.5rem">🌿 ✨ 🌷 ✨ 🌿</div>
+      <h2 style="font-weight:normal;color:var(--deep);margin:15px 0">What We Wish for You</h2>
+      <p style="max-width:700px;margin:auto">
+        We wish you a year filled with people who make you feel appreciated,
+        moments that become stories, courage for the things that scare you,
+        and enough little joys to make ordinary days special.
+        May you keep growing at your own pace, keep laughing at the silly things,
+        and keep making memories that you will look back on with a smile.
+        Most of all, may your eighteenth year be gentle, exciting, and full of
+        things that make you genuinely happy. ♡
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- GAME 5 + VIDEO -->
+<section>
+  <div class="section-heading">
+    <div class="label">05 · One last surprise</div>
+    <h2>Catch the Birthday Stars ✨</h2>
+    <p>Catch 10 stars before the little night sky lets you open the video.</p>
+  </div>
+
+  <div class="game-panel">
+    <div class="star-field" id="starField"><button class="star" style="left: 5.56051%; top: 27.2709%;">★</button><button class="star" style="left: 81.9925%; top: 54.3915%;">✧</button><button class="star" style="left: 28.7361%; top: 69.1483%;">✩</button></div>
+    <div class="progress" id="starProgress">Stars caught: 0 / 12</div>
+
+    <div class="video-wrap" id="videoWrap">
+      <div style="margin:20px 0 12px;font-size:1.1rem;color:var(--deep)">
+        You found the final surprise. ♡
+      </div>
+
+      <!-- Put your video in the same folder and rename it birthday-video.mp4 -->
+      <video controls="" preload="metadata">
+        <source src="birthday-video.mp4" type="video/mp4">
+        Your browser does not support video playback.
+      </video>
+
+      <p style="margin-top:12px;color:var(--muted);font-size:.85rem">
+        Replace "birthday-video.mp4" with the filename of your video.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ENDING -->
+<section class="closing" id="ending">
+  <div class="big-heart">♡</div>
+  <div style="font-size:4rem">-----</div>
+  <h2>Happy 18th Birthday,<br>Renzther!</h2>
+  <p>
+    Here's to eighteen, to all the memories already made,
+    and to all the beautiful ones still waiting ahead.
+    We love you, we appreciate you, and we are so happy to celebrate you today.
+  </p>
+  <div style="margin-top:25px;font-size:1.5rem">........</div>
+</section>
+
+<footer>
+  Made with love, flowers, memories, and a little bit of chaos ♡
+</footer>
+
+<div class="sticker cat">🐈</div>
+<div class="sticker flower">🌷</div>
+
+<script>
+/* Opening flower screen */
+const introFlowers = ["🌷","🌸","🌼","🌿","🌺","🍃","🌻","💐"];
+const burst = document.getElementById("flowerBurst");
+
+for(let i=0;i<42;i++){
+  const f=document.createElement("span");
+  f.className="burst-flower";
+  f.textContent=introFlowers[Math.floor(Math.random()*introFlowers.length)];
+  f.style.left=Math.random()*100+"%";
+  f.style.animationDuration=(5+Math.random()*7)+"s";
+  f.style.animationDelay=(-Math.random()*10)+"s";
+  burst.appendChild(f);
+}
+
+function enterSite(){
+  document.getElementById("flowerIntro").classList.add("hide");
+  document.body.classList.remove("locked");
+}
+
+/* GAME 1: flower hunt */
+const hunt=document.getElementById("flowerHunt");
+const flowerPositions=[
+  [6,13],[20,69],[34,27],[48,78],[61,17],[73,57],[87,29],[92,76]
+];
+let flowersFound=0;
+
+flowerPositions.forEach((pos,i)=>{
+  const b=document.createElement("button");
+  b.className="hunt-flower";
+  b.textContent=["🌷","🌼","🌸","🌻","🌺","🌷","🌼","🌸"][i];
+  b.style.left=pos[0]+"%";
+  b.style.top=pos[1]+"%";
+  b.onclick=()=>{
+    if(b.classList.contains("found")) return;
+    b.classList.add("found");
+    flowersFound++;
+    document.getElementById("flowerProgress").textContent=`Flowers found: ${flowersFound} / 8`;
+    if(flowersFound===8){
+      document.getElementById("memoryWall").classList.add("show");
+      setTimeout(()=>document.getElementById("memoryWall").scrollIntoView({behavior:"smooth",block:"start"}),500);
+    }
+  };
+  hunt.appendChild(b);
+});
+
+/* GAME 2: memory match */
+const memoryBoard=document.getElementById("memoryBoard");
+const symbols=["🌷","🌿","🌼","🐈","🌸","🍀","🌷","🌿","🌼","🐈","🌸","🍀"];
+let shuffled=[...symbols].sort(()=>Math.random()-.5);
+let first=null;
+let second=null;
+let busy=false;
+let matches=0;
+
+shuffled.forEach((symbol,index)=>{
+  const card=document.createElement("button");
+  card.className="memory-card";
+  card.dataset.symbol=symbol;
+  card.textContent="♡";
+  card.onclick=()=>{
+    if(busy || card.classList.contains("open") || card.classList.contains("matched")) return;
+
+    card.classList.add("open");
+    card.textContent=symbol;
+
+    if(!first){
+      first=card;
+      return;
+    }
+
+    second=card;
+    busy=true;
+
+    if(first.dataset.symbol===second.dataset.symbol){
+      first.classList.add("matched");
+      second.classList.add("matched");
+      matches++;
+      document.getElementById("memoryProgress").textContent=`Pairs matched: ${matches} / 6`;
+      first=null;
+      second=null;
+      busy=false;
+
+      if(matches===6){
+        document.getElementById("longLetters").classList.add("show");
+        setTimeout(()=>document.getElementById("longLetters").scrollIntoView({behavior:"smooth",block:"start"}),500);
+      }
+    }else{
+      setTimeout(()=>{
+        first.classList.remove("open");
+        second.classList.remove("open");
+        first.textContent="♡";
+        second.textContent="♡";
+        first=null;
+        second=null;
+        busy=false;
+      },700);
+    }
+  };
+  memoryBoard.appendChild(card);
+});
+
+/* GAME 3: poem order */
+const poemGame=document.getElementById("poemGame");
+const poemOrder=[
+  {id:1,text:"🌱"},
+  {id:2,text:"🌷"},
+  {id:3,text:"🌼"},
+  {id:4,text:"🌸"},
+  {id:5,text:"🌺"},
+  {id:6,text:"🌿"},
+  {id:7,text:"🍀"}
+];
+let poemCurrent=1;
+
+[...poemOrder].sort(()=>Math.random()-.5).forEach(item=>{
+  const b=document.createElement("button");
+  b.className="poem-piece";
+  b.textContent=item.text;
+  b.onclick=()=>{
+    if(item.id===poemCurrent){
+      b.classList.add("selected");
+      b.disabled=true;
+      poemCurrent++;
+      document.getElementById("poemProgress").textContent=`Poem pieces placed: ${poemCurrent-1} / 7`;
+
+      if(poemCurrent===8){
+        document.getElementById("poemSection").classList.add("show");
+        setTimeout(()=>document.getElementById("poemSection").scrollIntoView({behavior:"smooth",block:"center"}),400);
+      }
+    }else{
+      document.getElementById("poemProgress").textContent="Wrong piece! Start the order again.";
+      setTimeout(()=>{
+        poemCurrent=1;
+        document.querySelectorAll(".poem-piece").forEach(x=>{
+          x.classList.remove("selected");
+          x.disabled=false;
+        });
+        document.getElementById("poemProgress").textContent="Poem pieces placed: 0 / 7";
+      },650);
+    }
+  };
+  poemGame.appendChild(b);
+});
+
+/* GAME 4: wishes */
+let wishes=0;
+function chooseWish(btn){
+  if(btn.classList.contains("chosen")) return;
+  if(wishes>=5) return;
+
+  btn.classList.add("chosen");
+  wishes++;
+  document.getElementById("wishProgress").textContent=`Wishes chosen: ${wishes} / 5`;
+
+  if(wishes===5){
+    document.getElementById("wishSection").classList.add("show");
+    setTimeout(()=>document.getElementById("wishSection").scrollIntoView({behavior:"smooth",block:"center"}),400);
+  }
+}
+
+
+function chooseDecoy(btn){
+  btn.classList.add("wrong");
+  document.getElementById("wishProgress").textContent="Oops! The garden tricked you. Your wishes are reset.";
+  setTimeout(()=>{
+    btn.classList.remove("wrong");
+    wishes=0;
+    document.querySelectorAll("#wishGame .wish").forEach(x=>x.classList.remove("chosen"));
+    document.getElementById("wishProgress").textContent="Wishes chosen: 0 / 5";
+  },800);
+}
+
+/* GAME 5: star catch */
+const starField=document.getElementById("starField");
+let stars=0;
+
+function makeStar(){
+  const s=document.createElement("button");
+  s.className="star";
+  s.textContent=["✦","✧","★","✩"][Math.floor(Math.random()*4)];
+  s.style.left=(5+Math.random()*88)+"%";
+  s.style.top=(8+Math.random()*78)+"%";
+  s.onclick=()=>{
+    stars++;
+    s.remove();
+    document.getElementById("starProgress").textContent=`Stars caught: ${stars} / 12`;
+
+    if(stars<12){
+      makeStar();
+    }else{
+      document.getElementById("videoWrap").classList.add("show");
+      document.getElementById("videoWrap").scrollIntoView({behavior:"smooth",block:"center"});
+    }
+  };
+  starField.appendChild(s);
+}
+
+for(let i=0;i<3;i++) makeStar();
+</script>
+
+
+
+</body></html>
