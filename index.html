@@ -418,8 +418,8 @@ section{
 /* MEMORY GAME */
 .memory-board{
   display:grid;
-  grid-template-columns:repeat(3,1fr);
-   grid-template-rows:repeat(4, 1fr);
+  grid-template-columns:repeat(4,1fr);
+   grid-template-rows:repeat(3,1fr);
   gap:10px;
   max-width:520px;
   margin:20px auto;
@@ -741,7 +741,7 @@ video{
   <div class="game-panel">
     <div class="game-title">Memory Match</div>
     <div class="game-sub">Find all 6 matching pairs. Try to remember where each symbol is hiding.</div>
-    <div class="memory-board" id="memoryBoard"><button class="memory-card" data-symbol="🌿">♡</button><button class="memory-card" data-symbol="🌷">♡</button><button class="memory-card" data-symbol="🍀">♡</button><button class="memory-card" data-symbol="🌼">♡</button><button class="memory-card" data-symbol="🐈">♡</button><button class="memory-card" data-symbol="🌸">♡</button><button class="memory-card" data-symbol="🌼">♡</button><button class="memory-card" data-symbol="🌷">♡</button><button class="memory-card" data-symbol="🌸">♡</button><button class="memory-card" data-symbol="🍀">♡</button><button class="memory-card" data-symbol="🐈">♡</button><button class="memory-card" data-symbol="🌿">♡</button></div>
+   <div class="memory-board" id="memoryBoard"></div>
     <div class="progress" id="memoryProgress">Pairs matched: 0 / 6</div>
   </div>
 
